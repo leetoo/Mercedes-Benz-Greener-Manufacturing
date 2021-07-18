@@ -70,14 +70,12 @@ sub['y'] = 0
 for fold in range(1, 4):
     np.random.seed(fold)
     xgb_params = {
-        # 'n_trees': 610,
         'eta': 0.0049,
         'max_depth': 5,
         'subsample': 0.89,
         'objective': 'reg:squarederror',
         'eval_metric': 'rmse',
         'base_score': y_mean,
-        # 'silent': True,
         'colsample_bytree': 0.7,
         'seed': fold,
     }
